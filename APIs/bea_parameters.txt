@@ -1,0 +1,79 @@
+
+=== Parameters for NIPA ===
+🔒 Frequency       string     A - Annual, Q-Quarterly, M-Monthly                 1 1
+🔒 Year            integer    List of year(s) of data to retrieve (X for All)    1 1
+• ShowMillions    string     A flag indicating that million-dollar data should be returned. 0 0
+• TableID         integer    The standard NIPA table identifier                 0 0
+• TableName       string     The new NIPA table identifier                      0 0
+
+=== Parameters for NIUnderlyingDetail ===
+🔒 Frequency       string     A - Annual, Q-Quarterly, M-Monthly                 1 1
+🔒 Year            integer    List of year(s) of data to retrieve (X for All)    1 1
+• TableID         integer    The standard NI underlying detail table identifier 0 0
+• TableName       string     The new NIPA table identifier                      0 0
+
+=== Parameters for MNE ===
+🔒 DirectionOfInvestment string     Four Possible Values:  (inward,outward,parent,state) 1 0
+🔒 Classification  string     Classification is a string used to obtain data that is broken down by both country and industry for either inward or outward data.  It can take one of four possible values: 1 0
+🔒 Year            integer    Year is a 4-digit numeric variable.  To obtain data for multiple years, each year should be listed and separated by a comma. To obtain data for all years use 'all'. 1 1
+• OwnershipLevel  integer    A value of 1 returns data for all affiliates.  A value of 0 returns data for majority-owned affiliates only.  Note that if directionOfInvestment = 'parent', then OwnershipLevel must be set to 1. 0 0
+• NonbankAffiliatesOnly integer    A value of 1 returns data for nonbank affiliates only.  A value of 0 returns data for both bank and nonbank affiliates.  A value of 0 is required for data for 2007 forward (for FDIUS) for 2009 forward (for USDIA). 0 0
+• Country         string     Country is usually a number.  Because there can be several variants of a country's name, three-digit numeric codes are used to select countries.  A full list of these codes is available near the end of this document or can be obtained by using the GETPARAMETERVALUES method.  To obtain data for every country (including the all-country total) separately use 'all'.  To obtain a total for all countries, use '0000'.   To obtain data for multiple countries, each country code should be listed and separated by a comma. 0 1
+• Industry        string     Industries are denoted by four-digit codes.  With a few exceptions, these codes follow the NAICS. To obtain data for every industry separately use 'all'.  To obtain a total for all industries, use '0000'. 0 1
+• State           string     State specifies the U.S. state or states for data on foreign direct investment in the United States.  The state is specified by using the two-digit FIPS code.  For "Other U.S. areas", use code '70'.  For "Foreign", use code '75'.  To obtain data for all states and areas use 'all'.  To obtain a total U.S. figure, use '90'.   0 1
+• SeriesID        string     Series IDs                                         0 1
+• GetFootnotes    string     Footnotes for the datavalues                       0 0
+• Investment      string     Investments are denoted by Three-digit codes. To obtain data for every investment separately use 'all'.  To obtain a total for all investments, use '000'. 0 1
+• ParentInvestment string     Investments are denoted by Three-digit codes. To obtain data for every investment separately use 'all'.  To obtain a total for all investments, use '000'. 0 1
+
+=== Parameters for FixedAssets ===
+🔒 TableName       string     The new Fixed Assets identifier                    1 0
+🔒 Year            integer    List of year(s) of data to retrieve (X for All)    1 1
+
+=== Parameters for ITA ===
+• Indicator       string     The indicator code for the type of transaction requested 0 1
+• AreaOrCountry   string     The area or country requested                      0 1
+• Frequency       string     A - Annual, QSA - Quarterly seasonally adjusted, QNSA - Quarterly not seasonally adjusted 0 1
+• Year            string     Year requested                                     0 1
+
+=== Parameters for IIP ===
+• TypeOfInvestment string     Type of investment                                 0 1
+• Component       string     Component of changes in position                   0 1
+• Frequency       string     A - Annual, QNSA - Quarterly not seasonally adjusted 0 1
+• Year            string     Year requested                                     0 1
+
+=== Parameters for InputOutput ===
+🔒 TableID         integer    The unique Input-Output table identifier           1 1
+🔒 Year            integer    List of year(s) of data to retrieve (ALL for All)  1 1
+
+=== Parameters for IntlServTrade ===
+• TypeOfService   string     The type of service requested                      0 1
+• TradeDirection  string     The trade direction requested                      0 1
+• Affiliation     string     The affiliation requested                          0 1
+• AreaOrCountry   string     The area or country requested                      0 1
+• Year            string     The year requested                                 0 1
+
+=== Parameters for IntlServSTA ===
+• Channel         string     The channel requested                              0 1
+• Destination     string     The destination requested                          0 1
+• Industry        string     The industry requested                             0 1
+• AreaOrCountry   string     The area or country requested                      0 1
+• Year            string     The year requested                                 0 1
+
+=== Parameters for GDPbyIndustry ===
+🔒 Frequency       string     A - Annual, Q-Quarterly                            1 1
+🔒 Industry        string     List of industries to retrieve (ALL for All)       1 1
+🔒 TableID         integer    The unique GDP by Industry table identifier (ALL for All) 1 1
+🔒 Year            integer    List of year(s) of data to retrieve (ALL for All)  1 1
+
+=== Parameters for Regional ===
+🔒 GeoFips         string     Comma-delimited list of 5-character geographic codes; COUNTY for all counties, STATE for all states, MSA for all MSAs, MIC for all Micropolitan Areas, PORT for all state metro/nonmetro portions, DIV for all Metropolitan Divisions, CSA for all Combined Statistical Areas, state post office abbreviation for all counties in one state (e.g. NY) 1 1
+🔒 LineCode        integer    Line code for a statistic or industry              1 0
+🔒 TableName       string     Regional income or product table to retrieve       1 0
+• Year            string     Comma-delimted list of years; LAST5 for latest 5 years; LAST10 for latest 10 years; ALL for all years 0 1
+
+=== Parameters for UnderlyingGDPbyIndustry ===
+🔒 Frequency       string     Q-Quarterly                                        1 1
+🔒 Industry        string     List of industries to retrieve (ALL for All)       1 1
+🔒 TableID         integer    The unique Underlying GDP by Industry table identifier (ALL for All) 1 1
+🔒 Year            integer    List of year(s) of data to retrieve (ALL for All)  1 1
